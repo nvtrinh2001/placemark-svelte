@@ -17,6 +17,12 @@
   let restaurantLocationArray = [];
 
   async function inputHandler() {
+    locationSearchedByCityName = [];
+    cityArray = [];
+    restaurantSearchedByLocationId;
+    restaurantArray = [];
+    restaurantLocationArray = [];
+
     locationSearchedByCityName = await restaurantService.getLocations(cityName);
     cityArray = locationSearchedByCityName.results.data;
     cityId = cityArray[0].result_object.location_id;
@@ -222,6 +228,19 @@
           </div>
         </div>
       {/each}
+
+      {#if restaurantArray.length === 0}
+        <div class="no-img-avail">
+          <figure class="image is-4by3">
+            <img
+              src="https://i.pinimg.com/originals/44/8b/70/448b7040d44cfc0a620c03c63df26680.png"
+            />
+          </figure>
+          <p style="text-align: center; color: #ccc; margin: 4px;">
+            Start searching or try another city..
+          </p>
+        </div>
+      {/if}
     </div>
   </div>
 </div>

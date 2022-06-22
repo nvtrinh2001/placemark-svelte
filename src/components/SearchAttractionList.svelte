@@ -13,6 +13,13 @@
   let tagsArray = [];
 
   async function inputHandler() {
+    citySearchedByName = "";
+    attractionSearchedByCity = [];
+    attractionArray = [];
+    attractionLocationArray = [];
+    attractionPropertiesArray = [];
+    tagsArray = [];
+
     citySearchedByName = await attractionService.getLocations(cityName);
 
     attractionSearchedByCity = await attractionService.getAttractions(
@@ -160,6 +167,19 @@
           </div>
         </div>
       {/each}
+
+      {#if attractionPropertiesArray.length === 0}
+        <div class="no-img-avail">
+          <figure class="image is-4by3">
+            <img
+              src="https://i.pinimg.com/originals/44/8b/70/448b7040d44cfc0a620c03c63df26680.png"
+            />
+          </figure>
+          <p style="text-align: center; color: #ccc; margin: 4px;">
+            Start searching or try another city..
+          </p>
+        </div>
+      {/if}
     </div>
   </div>
 </div>
