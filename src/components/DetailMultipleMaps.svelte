@@ -5,8 +5,8 @@
   import { storeTypeMap } from "../stores.js";
 
   const placemarkService = getContext("PlacemarkService");
-  let location;
-  let descriptionArray;
+  let location = {};
+  let descriptionArray = [];
 
   const mapConfig = {
     location: { lat: 52.160858, lng: -7.15242 },
@@ -32,8 +32,8 @@
 
     console.log(location);
 
-    mapConfig.location.lat = Number(location.lat);
-    mapConfig.location.lng = Number(location.lng);
+    mapConfig.location.lat = location.lat;
+    mapConfig.location.lng = location.lng;
     map1 = new LeafletMap("placemark-map-1", mapConfig);
     mapConfig.zoom = 5;
     map2 = new LeafletMap("placemark-map-2", mapConfig, "Satellite");
@@ -117,8 +117,8 @@
           <li><strong>Latitude: </strong>{location.lat}</li>
           <li><strong>Longitude: </strong>{location.lng}</li>
         </ul>
-        <strong>Location Type:</strong>
-        {location.type.charAt(0).toUpperCase() + location.type.slice(1)}
+        <strong>Location type: </strong>
+        {location.type}
       </div>
     </div>
   {/if}

@@ -13,6 +13,9 @@
   let map = null;
 
   onMount(async () => {
+    const allLocations = await placemarkService.getAllLondonLocations();
+    mapConfig.location.lat = allLocations[allLocations.length - 1].lat;
+    mapConfig.location.lng = allLocations[allLocations.length - 1].lng;
     map = new LeafletMap("placemark-map", mapConfig);
     map.showZoomControl();
     map.addLayerGroup("Attractions");
@@ -21,7 +24,6 @@
     map.showLayerControl();
     map.showCoordinatesOfMouseClickDiscovery();
 
-    const allLocations = await placemarkService.getAllLondonLocations();
     for (let i = 0; i < allLocations.length; i++) {
       let type;
       if (allLocations[i].type === "attraction") {
