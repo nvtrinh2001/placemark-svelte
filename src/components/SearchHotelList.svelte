@@ -54,26 +54,6 @@
       location_array: hotelLocationArray,
       type: "hotel",
     });
-
-    const temp = hotelArray.map((value) => {
-      return {
-        name: value.name,
-        address: `${value.address.streetAddress}, ${value.address.locality}, ${value.address.region}, ${value.address.countryName}`,
-        lat: value.coordinate.lat,
-        lng: value.coordinate.lon,
-        description: `Rating: ${value.guestReviews.unformattedRating}\nNumber of Guest Reviews: ${value.guestReviews.total}\n${value.ratePlan.price.current}: ${value.ratePlan.price.info}`,
-        image: value.optimizedThumbUrls.srpDesktop,
-        type: "hotel",
-      };
-    });
-
-    console.log(
-      cityArray,
-      hotelSearchedByLocationId,
-      hotelArray,
-      $location,
-      temp
-    );
   }
 </script>
 

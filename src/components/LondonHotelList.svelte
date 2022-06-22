@@ -52,18 +52,6 @@
             </a>
           </div>
 
-          <!-- <div class="" style="padding: 6px 0;">
-              {#if hotel.cuisine}
-                {#each hotel.cuisine as tag}
-                  <div
-                    class="button is-light is-small is-rounded"
-                    style="margin: 5px 10px 5px 0; cursor: default;"
-                  >
-                    {tag.name}
-                  </div>
-                {/each}
-              {/if}
-            </div> -->
           <div class="" style="padding: 6px 0;">
             <div
               class="address"

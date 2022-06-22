@@ -8,7 +8,7 @@
 
   onMount(async () => {
     attractionList = await placemarkService.getLondonAttractionLocations();
-    console.log(attractionList);
+
     attractionLocationArray = attractionList.map((value) => {
       return {
         name: value.name,

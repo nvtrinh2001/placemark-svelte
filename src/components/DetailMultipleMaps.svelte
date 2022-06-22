@@ -6,6 +6,7 @@
 
   const placemarkService = getContext("PlacemarkService");
   let location;
+  let descriptionArray;
 
   const mapConfig = {
     location: { lat: 52.160858, lng: -7.15242 },
@@ -26,6 +27,8 @@
         window.location.hash.slice(10)
       );
     }
+
+    descriptionArray = location.description.split("\n");
 
     console.log(location);
 
@@ -95,10 +98,20 @@
         <p>
           {location.address}
         </p>
-        <h2>Description</h2>
-        <p>
-          {location.description}
-        </p>
+        <h3>Description</h3>
+        {#if descriptionArray.length > 1}
+          <ul>
+            {#each descriptionArray as value}
+              <li>
+                {value}
+              </li>
+            {/each}
+          </ul>
+        {:else}
+          <p>
+            {descriptionArray[0]}
+          </p>
+        {/if}
         <strong>Coordinates:</strong>
         <ul>
           <li><strong>Latitude: </strong>{location.lat}</li>

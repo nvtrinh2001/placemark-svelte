@@ -45,20 +45,6 @@
       location_array: restaurantLocationArray,
       type: "restaurant",
     });
-
-    const temp = restaurantArray.map((value) => {
-      return {
-        name: value.name,
-        address: value.address,
-        lat: value.latitude,
-        lng: value.longitude,
-        description: `Rating: ${value.rating}\nNumber of Guest Reviews: ${value.num_reviews}\nPrice: ${value.price}\nRanking: ${value.ranking}\nPhone: ${value.phone}`,
-        image: value.photo.images.original.url,
-        type: "restaurant",
-      };
-    });
-
-    console.log(temp);
   }
 </script>
 
