@@ -5,13 +5,13 @@
 
   const placemarkService = getContext("PlacemarkService");
 
-  let locationName,
-    locationAddress,
-    locationLat,
-    locationLng,
-    locationDescription,
-    locationImage,
-    updatedType;
+  let locationName = "Placeholder Name",
+    locationAddress = "",
+    locationLat = "",
+    locationLng = "",
+    locationDescription = "Placeholder Description",
+    locationImage = "",
+    updatedType = "";
   let returnedValue;
   // Modal
   // Function to close the modal

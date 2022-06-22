@@ -6,9 +6,9 @@
   const placemarkService = getContext("PlacemarkService");
   const reverseGeocodingService = getContext("ReverseGeocodingService");
 
-  let locationName,
-    locationAddress,
-    locationDescription,
+  let locationName = "Placeholder Name",
+    locationAddress = "",
+    locationDescription = "Placeholder Description",
     locationImage =
       "https://www.data-modul.com/sites/default/files/no-image.png";
   let returnedValue;
