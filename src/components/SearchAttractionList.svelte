@@ -43,7 +43,6 @@
 
     for (let i = 0; i < attractionPropertiesArray.length; i++) {
       attractionPropertiesArray[i].tags = tagsArray[i];
-      attractionLocationArray[i].feature_array = attractionPropertiesArray[i];
     }
 
     location.set({

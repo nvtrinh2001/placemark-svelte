@@ -32,7 +32,6 @@
 
     restaurantLocationArray = restaurantArray.map((value) => {
       return {
-        feature_array: value,
         name: value.name,
         lat: value.latitude,
         lng: value.longitude,

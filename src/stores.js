@@ -13,7 +13,6 @@ export const location = writable({
 });
 
 export const addNewLocation = writable({
-  add_type: "",
   lat: "",
   lng: "",
 });

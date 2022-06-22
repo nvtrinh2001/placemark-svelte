@@ -1,7 +1,6 @@
 <script>
   import MainNavigator from "../components/MainNavigator.svelte";
   import ChartBar from "../components/ChartBar.svelte";
-  import ChartLine from "../components/ChartLine.svelte";
   import ChartPie from "../components/ChartPie.svelte";
   import ChartPercentage from "../components/ChartPercentage.svelte";
   import { getContext, onMount } from "svelte";

@@ -118,15 +118,16 @@ export class LeafletMap {
 
         // console.log([popup._content]);
       } else if (typeMap === "discovery") {
+        let returnedData = `${location.lat},${location.lng}`;
         var content = L.DomUtil.create("div", "content");
         content.innerHTML = `<p style="text-align: center">${popupText}</p>
           <div style="display: flex; justify-content: space-between; align-items: center;">
             <a 
-              href="/#/discovery/remove" 
-              id="${locationId}" 
+              href="/#/favorite/add" 
+              id="${returnedData}" 
               style="margin-right: 6px;"
               class="button is-small is-danger is-rounded">
-                Remove
+                Add to Favorite
             </a>
             <a 
               href="/#/details/${locationId}" 
@@ -138,10 +139,16 @@ export class LeafletMap {
           </div>`;
         popup.setContent(content);
         // remove button
-        const removePopupElement = popup._content.lastElementChild.children[0];
-        removePopupElement.addEventListener("click", function (e) {
+        const addPopupElement = popup._content.lastElementChild.children[0];
+        // console.log([addPopupElement]);
+        addPopupElement.addEventListener("click", function (e) {
           // console.log(e.target.id);
-          updatedLocationId.set({ id: e.target.id });
+          let returnedCoordinates = e.target.id.split(",");
+          addNewLocation.set({
+            lat: returnedCoordinates[0],
+            lng: returnedCoordinates[1],
+          });
+          console.log(returnedCoordinates[0], returnedCoordinates[1]);
         });
 
         // detail button
@@ -164,7 +171,6 @@ export class LeafletMap {
           // console.log(e.target.id);
           let returnedCoordinates = e.target.id.split(",");
           addNewLocation.set({
-            add_type: "search",
             lat: returnedCoordinates[0],
             lng: returnedCoordinates[1],
           });
@@ -192,7 +198,6 @@ export class LeafletMap {
   showCoordinatesOfMouseClick() {
     this.imap.on("click", (e) => {
       addNewLocation.set({
-        add_type: "random",
         lat: e.latlng.lat,
         lng: e.latlng.lng,
       });
@@ -219,7 +224,6 @@ export class LeafletMap {
   showCoordinatesOfMouseClickDiscovery() {
     this.imap.on("click", (e) => {
       addNewLocation.set({
-        add_type: "random",
         lat: e.latlng.lat,
         lng: e.latlng.lng,
       });

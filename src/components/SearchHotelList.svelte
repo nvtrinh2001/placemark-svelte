@@ -41,7 +41,6 @@
 
     hotelLocationArray = hotelArray.map((value) => {
       return {
-        feature_array: value,
         name: value.name,
         lat: value.coordinate.lat,
         lng: value.coordinate.lon,
