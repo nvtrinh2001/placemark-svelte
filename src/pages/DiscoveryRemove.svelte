@@ -35,24 +35,16 @@
   }
 </script>
 
-<!-- Modal HTML content(hidden by default) starts here -->
 <div class="container">
-  <div class="modal is-active" id="modal1" style="z-index: 101;">
+  <div class="modal is-active" style="z-index: 101;">
     <div class="modal-background" on:click={closeHandler} />
-    <button
-      class="delete"
-      aria-label="close"
-      on:click={closeHandler}
-      style="color: #fff; top: 42px; right: -290px; z-index: 102;"
-    />
+    <button class="delete del-btn" aria-label="close" on:click={closeHandler} />
     <form
       class="modal-card"
       on:submit|preventDefault={(e) => removeFavoriteHandler(e)}
     >
-      <header class="modal-card-head" style="background-color: #3e8ed0;">
-        <p class="modal-card-title" style="font-weight: 500; color: #fff;">
-          Remove your location
-        </p>
+      <header class="modal-card-head modal-header">
+        <p class="modal-card-title modal-heading">Remove your location</p>
       </header>
       <div class="modal-card-body">
         <div class="">
@@ -68,3 +60,19 @@
     </form>
   </div>
 </div>
+
+<style>
+  .del-btn {
+    color: #fff;
+    top: 42px;
+    right: -290px;
+    z-index: 102;
+  }
+  .modal-header {
+    background-color: #3e8ed0;
+  }
+  .modal-heading {
+    font-weight: 500;
+    color: #fff;
+  }
+</style>

@@ -48,19 +48,29 @@
   }
 </script>
 
-<div
-  class="box"
-  id="placemark-map"
-  style=" height:624px;margin-top: 60px; margin-bottom: 12px; z-index: 1;"
-/>
-<form
-  class=""
-  on:submit|preventDefault={addPlacemarkMarker}
-  style="display: flex; justify-content: space-between; align-items: center; "
->
-  <p class="" style="color: #aaa; font-size: 14px;">
+<div class="box" id="placemark-map" />
+<form on:submit|preventDefault={addPlacemarkMarker}>
+  <p>
     After searching, click the button to show all the markers, click twice if it
     doesn't work the first time...
   </p>
   <button class="button is-small is-right is-link">Show on Map</button>
 </form>
+
+<style>
+  #placemark-map {
+    height: 624px;
+    margin-top: 60px;
+    margin-bottom: 12px;
+    z-index: 1;
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  form > p {
+    color: #aaa;
+    font-size: 14px;
+  }
+</style>

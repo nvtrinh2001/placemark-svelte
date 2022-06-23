@@ -28,10 +28,7 @@
       for {returnedValue.name}
     {/if}
   </p>
-  <div
-    class="box"
-    style=" max-height: 560px; overflow: auto; padding-top: 10px;"
-  >
+  <div class="box">
     <Gallery gap="10" maxColumnWidth="200">
       {#if returnedValue && $storeTypeMap.type === "discovery"}
         <img src={returnedValue.images.first} alt="" />
@@ -56,5 +53,10 @@
   img:hover {
     opacity: 1;
     transform: scale(1.04);
+  }
+  .box {
+    max-height: 560px;
+    overflow: auto;
+    padding-top: 10px;
   }
 </style>

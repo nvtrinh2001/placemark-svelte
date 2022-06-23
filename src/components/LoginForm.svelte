@@ -23,9 +23,7 @@
 <div class="" style="margin: 32px 0;">
   <form on:submit|preventDefault={login}>
     <div class="field">
-      <label class="label" for="email" style="color: rgb(128, 128, 128);"
-        >Email</label
-      >
+      <label class="label" for="email">Email</label>
       <input
         bind:value={email}
         class="input"
@@ -36,9 +34,7 @@
       />
     </div>
     <div class="field">
-      <label class="label" for="password" style="color: rgb(128, 128, 128);"
-        >Password</label
-      >
+      <label class="label" for="password">Password</label>
       <input
         bind:value={password}
         class="input"
@@ -48,7 +44,7 @@
         name="password"
       />
     </div>
-    <div class="field is-grouped" style="margin: 32px 0; ">
+    <div class="field is-grouped" style="margin: 32px 0;">
       <button
         class="button is-link is-fullwidth"
         style="background-color: #5a7670;">Log in</button
@@ -61,3 +57,9 @@
     </div>
   {/if}
 </div>
+
+<style>
+  .label {
+    color: rgb(128, 128, 128);
+  }
+</style>

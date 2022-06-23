@@ -14,8 +14,10 @@
 
   onMount(async () => {
     const allLocations = await placemarkService.getAllLocations();
-    mapConfig.location.lat = allLocations[allLocations.length - 1].lat;
-    mapConfig.location.lng = allLocations[allLocations.length - 1].lng;
+    if (allLocations.length !== 0) {
+      mapConfig.location.lat = allLocations[allLocations.length - 1].lat;
+      mapConfig.location.lng = allLocations[allLocations.length - 1].lng;
+    }
 
     map = new LeafletMap("placemark-map", mapConfig);
     map.showZoomControl();
@@ -46,8 +48,13 @@
   });
 </script>
 
-<div
-  class="box"
-  id="placemark-map"
-  style=" height:662px;margin-top: 60px; margin-bottom: 12px; z-index: 1;"
-/>
+<div class="box" id="placemark-map" />
+
+<style>
+  #placemark-map {
+    height: 662px;
+    margin-top: 60px;
+    margin-bottom: 12px;
+    z-index: 1;
+  }
+</style>

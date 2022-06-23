@@ -34,71 +34,53 @@
   }
 </script>
 
-<div class="" style=" max-height: 560px; overflow: auto;">
+<div class="list-container">
   {#if attractionList.length !== 0}
     {#each attractionList as attraction}
       <div class="box" style="padding-top: 10px;">
-        <div class="">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src={attraction.image}
-                alt={attraction.name}
-                style="object-fit: contain;"
-              />
-            </figure>
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img
+              src={attraction.image}
+              alt={attraction.name}
+              style="object-fit: contain;"
+            />
+          </figure>
+        </div>
+        <div class="panel-block" style="padding-left: 0px;">
+          <div class="subTitle">
+            {attraction.name}
           </div>
-          <div class="panel-block" style="padding-left: 0px;">
-            <div class="subTitle">
-              {attraction.name}
-            </div>
-          </div>
+        </div>
 
-          <div class="" style="padding: 6px 0;">
-            <div
-              class="address"
-              style="display: flex; justify-content: space-between; align-items: center;"
-            >
-              <div
-                class=""
-                style="font-size: 14px; display: flex; justify-content: left; align-items: center;"
-              >
-                <i class="fas fa-map-marker-alt" style="color: #3e8ed0;" />
-                <p style="margin-left: 6px;">Address</p>
-              </div>
-              <div
-                class="address-item"
-                style="text-align:right; font-size: 14px;"
-              >
-                {attraction.address}
-              </div>
-            </div>
+        <div class="address">
+          <div class="address-subtitle">
+            <i class="fas fa-map-marker-alt" style="color: #3e8ed0;" />
+            <p style="margin-left: 6px;">Address</p>
           </div>
+          <div class="address-item">
+            {attraction.address}
+          </div>
+        </div>
 
-          <div class="" style="padding: 6px 0;">
-            <div
-              class="button-wrapper"
-              style="display: flex; justify-content: space-between; align-items: center;"
+        <div class="button-wrapper">
+          <div class="button1">
+            <a
+              class="button is-small is-danger is-rounded"
+              style="margin-top: 6px;"
+              id={attraction._id}
+              on:click={(event) => prepHandler(event)}
+              href="/#/favorite/remove">Remove</a
             >
-              <div class="" style="font-size: 14px;color: #3e8ed0;">
-                <a
-                  class="button is-small is-danger is-rounded"
-                  style="margin-top: 6px;"
-                  id={attraction._id}
-                  on:click={(event) => prepHandler(event)}
-                  href="/#/favorite/remove">Remove</a
-                >
-              </div>
-              <div class="" style="text-align:right; font-size: 14px;">
-                <a
-                  class="button is-small is-link is-rounded"
-                  style="margin-top: 6px;"
-                  id={attraction._id}
-                  on:click={(event) => prepHandler(event)}
-                  href="/#/favorite/update">Update</a
-                >
-              </div>
-            </div>
+          </div>
+          <div class="button2">
+            <a
+              class="button is-small is-link is-rounded"
+              style="margin-top: 6px;"
+              id={attraction._id}
+              on:click={(event) => prepHandler(event)}
+              href="/#/favorite/update">Update</a
+            >
           </div>
         </div>
       </div>
@@ -110,3 +92,40 @@
     />
   {/if}
 </div>
+
+<style>
+  .list-container {
+    max-height: 560px;
+    overflow: auto;
+  }
+  .address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+  }
+  .address-subtitle {
+    font-size: 14px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .address-item {
+    text-align: right;
+    font-size: 14px;
+  }
+  .button-wrapper {
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .button1 {
+    font-size: 14px;
+    color: #3e8ed0;
+  }
+  .button2 {
+    text-align: right;
+    font-size: 14px;
+  }
+</style>

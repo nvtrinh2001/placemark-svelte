@@ -10,8 +10,8 @@
   </div>
 </div>
 
-<div class="columns" style="margin-left: 64px; margin-right: 70px;">
-  <div class="column is-4 " style=" margin-top: 50px;">
+<div class="columns column-list">
+  <div class="column is-4 " style="margin-top: 50px;">
     <FavoriteList />
   </div>
 
@@ -19,3 +19,10 @@
     <FavPlacemarkMap />
   </div>
 </div>
+
+<style>
+  .column-list {
+    margin-left: 64px;
+    margin-right: 70px;
+  }
+</style>

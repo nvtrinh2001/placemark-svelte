@@ -81,19 +81,15 @@
   });
 </script>
 
-<div class="columns" style="margin-top: 60px; margin-bottom: 12px; z-index: 1;">
-  <div
-    class="box column"
-    id="placemark-map-1"
-    style=" height: 320px; margin-left: 20px;"
-  />
+<div class="columns columns1">
+  <div class="box column" id="placemark-map-1" />
 
   {#if location}
     <div
       class="box column"
       style=" height:320px; margin-left: 20px; overflow: auto;"
     >
-      <div class="content" style="">
+      <div class="content">
         <h1>{location.name}</h1>
         <p>
           {location.address}
@@ -124,14 +120,20 @@
   {/if}
 </div>
 <div class="columns">
-  <div
-    class="box column"
-    id="placemark-map-2"
-    style=" height:320px; margin-left: 20px;"
-  />
-  <div
-    class="box column"
-    id="placemark-map-3"
-    style=" height:320px; margin-left: 20px;"
-  />
+  <div class="box column" id="placemark-map-2" />
+  <div class="box column" id="placemark-map-3" />
 </div>
+
+<style>
+  .columns1 {
+    margin-top: 60px;
+    margin-bottom: 12px;
+    z-index: 1;
+  }
+  #placemark-map-1,
+  #placemark-map-2,
+  #placemark-map-3 {
+    height: 320px;
+    margin-left: 20px;
+  }
+</style>

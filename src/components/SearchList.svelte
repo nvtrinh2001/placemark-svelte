@@ -10,7 +10,6 @@
   <p class="panel-heading">{selectedChoice} around you</p>
   <div class="control has-icons-left" style="margin: 12px 0 4px 20px;">
     <div class="select is-small is-rounded ">
-      <!-- <select bind:value={selectedChoice}> -->
       <select bind:value={selectedChoice}>
         {#each choiceList as choice}
           <option>{choice}</option>

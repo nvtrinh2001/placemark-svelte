@@ -10,7 +10,6 @@
     userEmail,
     userPassword,
     userType,
-    togglePassword,
     password,
     iconPassword;
 
@@ -24,7 +23,6 @@
   });
 
   async function showPasswordHandler() {
-    togglePassword = document.querySelector("#togglePassword");
     password = document.querySelector("#password");
     iconPassword = document.querySelector("#icon-password");
     // toggle the type attribute
@@ -60,6 +58,7 @@
   <div class="panel-heading">Your Information</div>
   <div class="panel-block">
     <div class="field-label is-normal">
+      <!-- svelte-ignore a11y-label-has-associated-control -->
       <label class="label">Name</label>
     </div>
     <div class="field-body">
@@ -95,6 +94,7 @@
 
   <div class="panel-block">
     <div class="field-label is-normal">
+      <!-- svelte-ignore a11y-label-has-associated-control -->
       <label class="label">Email</label>
     </div>
     <div class="field-body">
@@ -117,6 +117,7 @@
 
   <div class="panel-block">
     <div class="field-label is-normal">
+      <!-- svelte-ignore a11y-label-has-associated-control -->
       <label class="label">Password</label>
     </div>
     <div class="field-body">
@@ -145,14 +146,13 @@
 
   <div class="panel-block">
     <div class="field-label is-normal">
+      <!-- svelte-ignore a11y-label-has-associated-control -->
       <label class="label">Account Type</label>
     </div>
     <div class="field-body">
       <div class="field is-narrow">
         <div class="control">
           <input class="button is-static" name="type" bind:value={userType} />
-          <!-- <p>{userType}</p> -->
-          <!-- </input> -->
         </div>
       </div>
     </div>

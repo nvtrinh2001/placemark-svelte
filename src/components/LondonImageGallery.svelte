@@ -28,10 +28,7 @@
       on:click={londonTypeHandler}>Restaurant</button
     >
   </p>
-  <div
-    class="box"
-    style=" max-height: 560px; overflow: auto; padding-top: 10px;"
-  >
+  <div class="box">
     {#if typeLocation === "attraction"}
       <GalleryAttraction type="discovery" />
     {/if}
@@ -43,3 +40,11 @@
     {/if}
   </div>
 </article>
+
+<style>
+  .box {
+    max-height: 560px;
+    overflow: auto;
+    padding-top: 10px;
+  }
+</style>
