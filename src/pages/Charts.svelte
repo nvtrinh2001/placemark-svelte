@@ -66,7 +66,7 @@
   </div>
 </div>
 
-<div class="columns" style="margin-left: 64px; margin-right: 70px;">
+<div class="columns column-list">
   <div class="column" style=" margin-top: 100px;">
     <article class="panel is-info">
       <p class="panel-heading">London locations per type</p>
@@ -130,3 +130,10 @@
     </article>
   </div>
 </div>
+
+<style>
+  .column-list {
+    margin-left: 64px;
+    margin-right: 70px;
+  }
+</style>
