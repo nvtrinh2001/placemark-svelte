@@ -21,10 +21,7 @@
   import { HotelService } from "./services/hotel-service.js";
   import { AttractionService } from "./services/attraction-service.js";
   import { ReverseGeocodingService } from "./services/reverse-geocoding-service";
-  setContext(
-    "PlacemarkService",
-    new PlacemarkService("https://travisor-hapi.herokuapp.com/")
-  );
+  setContext("PlacemarkService", new PlacemarkService("http://localhost:4000"));
   setContext("RestaurantService", new RestaurantService());
   setContext("HotelService", new HotelService());
   setContext("AttractionService", new AttractionService());
