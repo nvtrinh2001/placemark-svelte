@@ -1,6 +1,8 @@
-# Svelte + Vite
+# Travisor
 
-This template should help get you started developing with Svelte in Vite.
+[Travisor](./src/assets/Travisor.png)
+A POI application giving basic information when travelling to new places.
+![NPM](https://img.shields.io/npm/l/svelte?color=orange)
 
 ## Recommended IDE Setup
 
@@ -43,6 +45,6 @@ If you have state that's important to retain within a component, consider creati
 ```js
 // store.js
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from "svelte/store";
+export default writable(0);
 ```
