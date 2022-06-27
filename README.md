@@ -37,9 +37,9 @@ Check out [Travisor](https://travisor-svelte.vercel.app/) website:
 
 **Clone this directory**
 
-...
+```
 git clone git@github.com:nvtrinh2001/placemark-svelte.git
-...
+```
 
 **Update new versions for dependent packages**
 
@@ -50,15 +50,15 @@ git clone git@github.com:nvtrinh2001/placemark-svelte.git
 
 **Build**
 
-...
+```
 npm install
-...
+```
 
 To run the application on your local machine:
 
-...
+```
 npm run dev
-...
+```
 
 The application should start running:
 
