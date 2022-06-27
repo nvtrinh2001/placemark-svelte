@@ -1,18 +1,23 @@
-# Travisor
-
 ![Travisor](./src/assets/Travisor1.png)
+
+# Travisor
 
 ![NPM](https://img.shields.io/npm/l/svelte?color=orange)
 
 A POI application giving basic information when travelling to new places.
 
-## Recommended IDE Setup
+## Website
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+Check out [Travisor](https://travisor-svelte.vercel.app/) website.
 
-## Need an official Svelte framework?
+## Key Features
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- Search: search locations around the world:
+  - Tourist attractions
+  - Hotels
+  - Restaurants
+- Favorite: add your own favorite locations.
+- London Discovery: discover London with recommendations.
 
 ## Technical considerations
 
