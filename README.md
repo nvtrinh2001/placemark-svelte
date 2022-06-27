@@ -1,6 +1,6 @@
 # Travisor
 
-![Travisor](./src/assets/Travisor.png)
+![Travisor](./src/assets/Travisor1.png)
 
 ![NPM](https://img.shields.io/npm/l/svelte?color=orange)
 
