@@ -1,8 +1,10 @@
 # Travisor
 
-[Travisor](./src/assets/Travisor.png)
-A POI application giving basic information when travelling to new places.
+![Travisor](./src/assets/Travisor.png)
+
 ![NPM](https://img.shields.io/npm/l/svelte?color=orange)
+
+A POI application giving basic information when travelling to new places.
 
 ## Recommended IDE Setup
 
