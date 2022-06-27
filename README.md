@@ -1,4 +1,4 @@
-![Travisor](./src/assets/Travisor1.png)
+![Travisor](./src/assets/Travisor.png)
 
 # Travisor: A Travel Advisor Application
 
