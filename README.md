@@ -1,14 +1,27 @@
 ![Travisor](./src/assets/Travisor1.png)
 
-# Travisor
+# Travisor: A Travel Advisor Application
 
 ![NPM](https://img.shields.io/npm/l/svelte?color=orange)
 
-A POI application giving basic information when travelling to new places.
+The application provides basic information when travelling to new places.
+
+Travisor is built using [Svelte](https://svelte.dev/), [Leaflet](https://leafletjs.com/), and some other packages.
+
+It relies on several APIs hosted on RapidAPI:
+
+- [Places](https://rapidapi.com/opentripmap/api/places1/)
+- [Hotels com Provider](https://rapidapi.com/tipsters/api/hotels-com-provider/)
+- [Worldwide Restaurants](https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/)
+- [Forward & Reverse Geocoding](https://rapidapi.com/GeocodeSupport/api/forward-reverse-geocoding/)
+
+It is also connected to [Travisor Server](https://travisor-hapi.herokuapp.com/) to save locations from users.
 
 ## Website
 
-Check out [Travisor](https://travisor-svelte.vercel.app/) website.
+Check out [Travisor](https://travisor-svelte.vercel.app/) website:
+
+- https://travisor-svelte.vercel.app/
 
 ## Key Features
 
@@ -18,8 +31,9 @@ Check out [Travisor](https://travisor-svelte.vercel.app/) website.
   - Restaurants
 - Favorite: add your own favorite locations.
 - London Discovery: discover London with recommendations.
+- Map: locations can be shown on the map.
 
-## Technical considerations
+## Installation
 
 **Why use this over SvelteKit?**
 
